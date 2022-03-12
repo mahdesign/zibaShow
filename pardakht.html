@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+
+    <!-- fontaswom -->
+
+    <link rel="stylesheet" href="./fontawesome-free-5.9.0-web/css/all.css">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        ul li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <br>
+        <div class="container bg-light rounded pardakht my-4">
+            <div class="row">
+                <div class="col-3  text-center py-3">
+                    <img src="./img/shaparak.png" alt="shaparak" class="img-fluid">
+                </div>
+                <div class="col-6 text-center my-auto ">
+                    <h5>پرداخت اینترنتی تجارت الکترونیک پارسیان</h5>
+                </div>
+                <div class="col-3   text-center py-3">
+                    <img src="./img/parsian.png" alt="shaparak" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 cart-info p-0 ">
+                    <div class="container bg-white p-0 mb-4">
+                        <p class="px-3 rounded "><i class="fas fa-credit-card"></i> اطلاعات کارت</p>
+                        <form action="" class="px-4">
+                            <div class="form-group row cart-number">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">شماره کارت</label>
+                                </div>
+
+                                <div class="col-9 p-sm-0 ">
+                                    <input type="text" value="" class="form-control">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <div class="form-group row cart-number">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">CVV2 </label>
+                                </div>
+
+                                <div class="col-9 p-sm-0">
+                                    <input type="text" value="" class="form-control">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">تاریخ انقضا </label>
+                                </div>
+
+                                <div class="col-3 p-sm-0 m-sm-2">
+                                    <input type="text" value="" class="form-control" placeholder="ماه">
+                                </div>
+                                <div class="col-3 p-sm-0 m-sm-2">
+                                    <input type="text" value="" class="form-control" placeholder="سال">
+                                </div>
+                            </div>
+                            <div class="form-group row cart-number">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">کد امنیتی</label>
+                                </div>
+
+                                <div class="col-9 p-sm-0 input-group">
+                                    <input type="text" value="" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text bg-white"> <i
+                                                class="fas fa-redo-alt fa-flip-horizontal text-primary"
+                                                onclick="changeCaptcha()"></i></span>
+                                    </div>
+                                </div>
+                                <img src="./img/captcha-0.jpg" alt="" id="imgCaptch" onclick="changeCaptcha()">
+                            </div>
+                            <div class="form-group row cart-number">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">رمز دوم</label>
+                                </div>
+
+                                <div class="col-9 p-sm-0">
+                                    <input type="text" value="" class="form-control">
+
+                                    <span class="px-2  rounded text-white ramz-pooya"><i
+                                            class="fas fa-lock pl-1 fa-sm"></i>رمز پویا</span>
+
+
+                                    <i class="fas fa-calculator"></i>
+
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-2 text-center">
+                                    <label for="" class="my-auto mr-sm-2">ایمیل (اختیاری)</label>
+                                </div>
+
+                                <div class="col-9 p-sm-0">
+                                    <input type="text" value="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="text-center End-pardakht">
+                                <a href="successPardakht.html" class="btn btn-success mx-2 px-5 mb-4">پرداخت</a>
+                                <a href="getAddress.html" class="btn mx-2 px-5 mb-4">انصراف</a>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-md-5 seller-info">
+                    <div class="container bg-white p-0 mb-4">
+
+                        <p class="time-to-left rounded px-3">
+                            <i class="far fa-clock pl-1"></i>
+                            زمان باقی مانده
+                            <span class="timer" data-minutes-left=15></span>
+                        </p>
+
+
+                        <h4 class="text-center pt-4">اطلاعات پذیرنده</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <span class="pr-1">نام فروشگاه:</span>
+                            </div>
+                            <div class="col-md-8 col-sm-7">
+                                <span class="px-md-3">فروشگاه اینترنتی زیباشو</span>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <span class="pr-1">آدرس فروشگاه:</span>
+                            </div>
+                            <div class="col-md-8 col-sm-7">
+                                <span class="px-md-3">http://zibaShow.ir</span>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <span class="pr-1">کدپذیرنده:</span>
+                            </div>
+                            <div class="col-8 col-sm-7">
+                                <span class="px-md-3">4380873976</span>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-5">
+                                <span class="pr-1">شماره ترمینال:</span>
+                            </div>
+                            <div class="col-md-8 col-sm-7">
+                                <span class="px-md-3">98449513</span>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="row my-3 pardakht-total py-2 text-white">
+                                <div class="col-md-6 col-sm-8">
+                                    <span class="pr-5  text-centere pr-sm-0">مبلغ قابل پرداخت(ریال):</span>
+                                </div>
+                                <div class="col-md-6 text-left col-sm-4">
+                                    <span class="px-5 totalCost px-sm-0"></span>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row guid-ramz-pooya">
+                <div class="container">
+                    <p class="rounded px-3">
+                        <i class="fas fa-question-circle"></i>
+                        راهنمای استفاده از رمز پویا
+                    </p>
+                    <div class="container bg-white check">
+                        <p class=" px-2 py-1"><i class="fas fa-check text-success"></i> رمز پویا، رمز یکبار مصرفی است که
+                            به جای رمز دوم کارت استفاده می شود</p>
+                        <p class=" px-2 pb-2"><i class="fas fa-check text-success"></i> مرحله اول - براساس دستورالعمل
+                            بانک صادرکننده کارت خود، نسبت به فعال سازی رمز پویا اقدام نمایید</p>
+                        <div class="check-ol">
+                            <p class=" px-2 pt-1 border-0"><i class="fas fa-check text-success"></i>مرحله دوم -رمز پویا
+                                ر ا براساس روش اعلامی از طرف بانک صادرکننده کارت، به یکی از روش های زیر دریافت کنید.</p>
+                            <ol>
+                                <li>دریافت از طریق برنامه کاربردی بانک، اینترنت بانک و یا موبایل بانک</li>
+                                <li>دریافت از طریق کد USSD بانک صادرکننده کارت شما</li>
+                                <li>دریافت از طریق زدن دکمه ی " رمز پویا" در درگاه پرداخت اینترنت</li>
+                            </ol>
+                        </div>
+                        <p class=" px-2 py-1"><i class="fas fa-check text-success"></i> مرحله سوم -پس از دریافت رمز به
+                            یکی از روش های فوق، رمز پویای دریافت شده را در محل تعیین شده برای "رمز دوم" وارد نمایید و
+                            سپس مابقی اطلاعات را تکمیل نمایید.</p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="container guid-pardakht">
+                                <p class="rounded px-3 rounded">
+                                    <i class="fas fa-question-circle"></i>
+                                    راهنمای پرداخت
+                                </p>
+                            </div>
+                            <div class="container check bg-white">
+                                <p class=" px-2 py-1"><i class="fas fa-check text-success"></i>مشتری گرامی شما با پروتكل
+                                    امن (SSL) به دروازه پرداخت تجارت الكترونيك پارسيان كه با آدرس
+                                    https://pec.shaparak.ir شروع می شود متصل شده ايد.</p>
+                                <p class=" px-2 pb-2"><i class="fas fa-check text-success"></i> خواهشمند است جهت جلوگيری
+                                    از سوء استفاده های اينترنتی، آدرس جاری مرورگر وب خود را با آدرس مذكور مقايسه نماييد.
+                                </p>
+                                <p class=" px-2 pb-2"><i class="fas fa-check text-success"></i> لطفا از صحت نام فروشنده
+                                    و مبلغ نمايش داده شده، اطمينان حاصل فرماييد. برای جلوگيری از افشای رمز کارت خود، حتی
+                                    المقدور از صفحه کليد مجازی استفاده فرماييد.</p>
+                                <p class=" px-2 pb-1 border-0"><i class="fas fa-check text-success"></i> نحوه ورود
+                                    اطلاعات:</p>
+                                <ul class="p-0">
+                                    <li class="py-1 pr-4">
+                                        <i class="fas fa-credit-card"></i>
+                                        شماره کارت: شماره کارت 16 رقمی مندرج بر روی کارت.
+                                    </li>
+                                    <li class="py-1 pr-4">
+                                        <i class="fas fa-lock"></i>
+                                        رمز دوم کارت: رمز دوم(یا رمز اینترنتی) دریافت شده از بانک صادرکننده و یا
+                                        خودپرداز.
+                                    </li>
+                                    <li class="py-1 pr-4">
+                                        <i class="fas fa-lock"></i>
+                                        CVV2: کد سه یا چهار رقمی مندرج در پشت و روی کارت.
+                                    </li>
+                                    <li class="py-1 pr-4">
+                                        <i class="far fa-clock"></i>
+                                        تاریخ انقضا: ماه و سال انقضای کارت مندرج بر روی کارت.
+                                    </li>
+                                    <li class="py-1 pr-4">
+                                        <i class="fas fa-lock"></i>
+                                        کد امنیتی: حروف و ارقام مندرج در ذیل عنوان کد امنیتی که قابل تغییر نیز می باشد.
+                                    </li>
+                                    <li class="py-1 pr-4">
+                                        <i class="fas fa-envelope"></i>
+                                        ایمیل(اختیاری): ورود آدرس ایمیل در صورت نیاز به دریافت رسید پرداخت.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container pardakht-footer">
+                <div class="row ">
+                    <div class="container  ">
+                        <h6 class="text-center pt-2 pb-0">اطلاعات تماس پشتیبانی: <bdo dir="ltr">021-2318</bdo></h6>
+                        <p class="text-center py-0">کلیه حقوق این سایت متعلق به شرکت تجارت الکترونیک پارسیان می باشد</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery.simple.timer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--main file js -->
+    <script src="js/main.js"></script>
+
+    <script>
+        function changeCaptcha() {
+            var img = ["captcha-0", "captcha-1", "captcha-2", "captcha-3", "captcha-4", "captcha-5", "captcha-6",
+                "captcha-7", "captcha-8", "captcha-9"
+            ]
+            var imgCaptcha = document.getElementById('imgCaptch');
+            var i = Math.floor(Math.random() * 10);
+            imgCaptcha.src = "./img/" + img[i] + ".jpg"
+        }
+
+        var totalCost = localStorage.getItem('totalCost');
+        document.querySelector('.totalCost').textContent = totalCost + "000000";
+    </script>
+    <script>
+        $('.timer').startTimer({
+            onComplete: function (element) {
+                window.location.href = "index.html";
+            }
+        })
+    </script>
+
+</body>
+
+</html>

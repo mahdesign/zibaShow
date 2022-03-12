@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه اینترنتی زیباشو|زیباشوید</title>
+    <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+
+    <!-- fontaswom -->
+
+    <link rel="stylesheet" href="./fontawesome-free-5.9.0-web/css/all.css">
+
+
+    <!-- slick slider -->
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header include name of site and navbar -->
+    <header class="">
+        <!-- logo and login and register -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center m-auto py-2"></div>
+                <div class="col-md-4 text-center m-auto py-2">
+                    <h2>زیباشو</h2>
+                </div>
+                <div class="col-md-4   m-auto text-center text-md-left py-2">
+                    <button class="btn btn-secondray btn-log m-2 " data-toggle="modal"
+                        data-target="#register">عضویت</button>
+                    <button class="btn btn-color btn-log" data-toggle="modal" data-target="#login">ورود</button>
+                </div>
+                <!-- modal of register -->
+                <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title m-auto text-secondary">فرم عضویت</h3>
+                                <button class="close m-1 p-1 text-danger" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="get" class="form-group">
+                                    <label for="name">نام و نام خانوادگی:</label><input type="text" id="name"
+                                        class="form-control">
+                                    <label for="username">نام کاربری:</label><input type="text" id="username"
+                                        class="form-control">
+                                    <label for="password">رمزعبور:</label><input type="password" id="password"
+                                        class="form-control">
+                                    <label for="tellphone">تلفن همراه</label><input type="tel" id="tellphone"
+                                        class="form-control">
+                                    <label for="email">ایمیل:</label><input type="email" id="email"
+                                        class="form-control md-3">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button class="btn btn-sm btn-outline-success text-left m-1 p-1">وارد شوید</button>
+                                <button class="btn btn-link m-1 p-1 reg-btn" data-toggle="modal" data-target="#login"
+                                    onclick="removeReg()">ایا دارای حساب کاربری هستید؟</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /END modal of register -->
+                <!-- modal of log in -->
+                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title m-auto text-secondary">فرم ورود</h3>
+                                <button class="close m-1 p-1 text-danger" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="get" class="form-group">
+                                    <label for="username">نام کاربری:</label><input type="text" id="username"
+                                        class="form-control">
+                                    <label for="password">رمزعبور:</label><input type="password" id="password"
+                                        class="form-control">
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="modal-footer">
+
+                                    <button class="btn  btn-outline-success text-left m-1 p-1">وارد شوید</button>
+                                    <button class="btn  btn-sm  btn-link m-1 p-1 login-btn" data-toggle="modal"
+                                        data-target="#register" onclick="removeLogin()">آیا عضو سایت نیستید؟</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /END modal of log in -->
+            </div>
+        </div>
+        <!-- / END logo and login and register -->
+
+        <!-- navigation menue -->
+        <div class="container-fluid p-0 ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">صفحه اصلی
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                محصولات
+                            </a>
+                            <div class="dropdown-menu drop-category" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-center" href="product-makeup.html">آرایشی</a>
+                                <a class="dropdown-item text-center" href="product-skinCare.html">پوستی</a>
+                                <a class="dropdown-item text-center" href="product-hair.html">مراقبت از مو</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                برندها
+                            </a>
+                            <div class="dropdown-menu drop-brands" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-center" href="cinere.html">سینره</a>
+                                <a class="dropdown-item text-center" href="cerita.html">سریتا</a>
+                                <a class="dropdown-item text-center" href="goldenRose.html">گلدن رز</a>
+                                <a class="dropdown-item text-center" href="calista.html">کالیستا</a>
+                                <a class="dropdown-item text-center" href="hydroderm.html">هیدرودرم</a>
+                                <a class="dropdown-item text-center" href="biol.html">بیول</a>
+                                <a class="dropdown-item text-center" href="bioderma.html">بایودرما</a>
+                                <a class="dropdown-item text-center" href="sunsafe.html">سان سیف</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-to-us.html">تماس با ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html"> درباره ما</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="دنبال چی میگردی؟" aria-label="search"
+                                aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                            </div>
+
+                        </div>
+                    </form>
+                </nav>
+                <div class="navbar-nav">
+                    <a href="cart.html" class="nav-item-cart">
+                        <li class="nav-item border mx-2 rounded-circle cart">
+                            <i class="fas fa-shopping-basket p-2"></i><span>0</span>
+                        </li>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <!--/END navigation menue -->
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 my-4">
+                    <img src="./img/goldenRose-khatCheshm.jpg" alt="goldenRose-khatCheshm" class="img-fluid w-75 mt-2"
+                        id="product-img">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="my-4">
+                        خط چشم مویی گلدن رز</h2>
+                    <div class="rating my-2">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half fa-flip-horizontal"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h5 class="mt-2">قیمت:42.000 تومان</h5>
+                    <p class=" text-justify">
+                        خط چشم گلدن رز دارای سر نمدی بسیار انعطاف پذیر
+                        و مخصوص طراحی بوده که استفاده از آن را بسیار راحت کرده است. این محصول با رنگ دانه های غنی، به
+                        سرعت خشک می شود
+                        و خط چشمی کاملا پیوسته و بدون لک بر روی پلک ایجاد می کند. خط چشم ضد آب گلدن رز
+                        در مقابل تعریق بدن و آب کاملا مقاوم بوده و ماندگاری طولانی دارد.
+                    </p>
+
+
+                    <span class="addToCart add-cart my-3"> <i class="fas fa-shopping-basket p-2"></i>افزودن به سبد
+                        خرید</span>
+                    <i class="fas fa-plus p-2 m-1"></i><input type="text" value="1" id="numOfProduct"
+                        class="numOfProduct"><i class="fas fa-minus p-2 m-1"></i>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info m-2">
+                        <h5>اطلاعات تماس</h5>
+                        <p><i class="fas fa-home p-1"></i>خیابان پیروزی - بلوار نبرد جنوبی -خیابان ده حقی (آهنگ) - نبش
+                            بلوارکوثر
+                        </p>
+                        <p><i class="fas fa-phone p-1"></i>۰۲۱-۳۳۷۲۲۸۳۱</p>
+                        <p><i class="fas fa-clock p-1"></i>ساعت پاسخگویی:شنبه تا پنج شنبه 9:00 تا 18:00</p>
+                        <p><i class="fas fa-envelope p-1"></i>info@zibaShow.ir</p>
+                        <div class="social-media">
+                            <i class="fab fa-instagram p-1"></i>
+                            <i class="fab fa-telegram p-1"></i>
+                            <i class="fab fa-twitter p-1"></i>
+                            <i class="fab fa-pinterest p-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-info m-2">
+                        <h5>با زیباشو،زیباشوید!</h5>
+                        <p>فروشگاه اینترنتی زیباشو به عنوان مرجع تخصصی در حوزه بهداشتی و آرایشی فعالیت دارد و به شما
+                            همراهان عزیز کمک میکند تا پوستی سالم و زیبا داشته باشید؛ در زیباشو شما میتوانید محصولات
+                            آرایشی و بهداشتی متناسب با
+                            پوست خود را از انواع برند های معتبر ایرانی و خارجی تهیه و زیبایی خود را دوچندان کنید.</p>
+                        <div class="logo-img text-center">
+                            <img src="./img/logo-enamad.png" alt="logo-enamad">
+                            <img src="./img/logo-samandehi.png" alt="logo-samandehi">
+                            <img src="./img/logo-anjoman.png" alt="logo-anjoman">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col link-footer m-4">
+                            <a href="contact-to-us.html" class="p-2">تماس با ما</a>
+                            <a href="about-us.html" class="p-2">درباره ما</a>
+                            <a href="guid-of-buy.html" class="p-2">راهنمای سفارش و خرید</a>
+                            <a href="send-product.html" class="p-2">ارسال و تحویل کالا</a>
+                        </div>
+                        <div class="col link-footer m-4">
+                            <a href="privacy.html" class="p-2">حریم خصوصی</a>
+                            <a href="rule-of-zibaShow.html" class="p-2">قوانین و مقررات</a>
+                            <a href="send-gift.html" class="p-2">ارسال هدیه</a>
+                            <a href="common-question.html" class="p-2">سوالات متداول</a>
+                        </div>
+                    </div>
+                    <div class="code mx-4">
+                        <h5>ایمیل تو وارد کن تا از تخفیف ها جا نمونی!</h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-dark" type="button">ارسال</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4 copy-right">
+                    <p class="text-center">کلیه حقوق این سایت متعلق به شرکت <bdo dir="ltr">mahdesign</bdo> می باشد.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /END footer -->
+
+    <!-- jquery -->
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--main file js -->
+    <script src="js/main.js"></script>
+    <script src="js/goldenRose-khatCheshm.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fa-plus").click(function () {
+                var number_of_products = 0;
+                number_of_products = parseInt($('#numOfProduct').attr('value'));
+                number_of_products = number_of_products + 1;
+                $('#numOfProduct').attr('value', number_of_products);
+            });
+            $(".fa-minus").click(function () {
+                var number_of_products = 0;
+                number_of_products = parseInt($('#numOfProduct').attr('value'));
+                if (number_of_products > 1) {
+                    number_of_products = number_of_products - 1;
+                    $('#numOfProduct').attr('value', number_of_products);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

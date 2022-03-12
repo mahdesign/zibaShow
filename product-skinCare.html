@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات مراقبتی پوست زیباشو</title>
+    <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+
+    <!-- fontaswom -->
+
+    <link rel="stylesheet" href="./fontawesome-free-5.9.0-web/css/all.css">
+
+
+    <!-- slick slider -->
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header include name of site and navbar -->
+    <header>
+        <!-- logo and login and register -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center m-auto py-2"></div>
+                <div class="col-md-4 text-center m-auto py-2">
+                    <h2>زیباشو</h2>
+                </div>
+                <div class="col-md-4   m-auto text-center text-md-left py-2">
+                    <button class="btn btn-secondray btn-log m-2 " data-toggle="modal"
+                        data-target="#register">عضویت</button>
+                    <button class="btn btn-color btn-log" data-toggle="modal" data-target="#login">ورود</button>
+                </div>
+                <!-- modal of register -->
+                <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title m-auto text-secondary">فرم عضویت</h3>
+                                <button class="close m-1 p-1 text-danger" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="get" class="form-group">
+                                    <label for="name">نام و نام خانوادگی:</label><input type="text" id="name"
+                                        class="form-control">
+                                    <label for="username">نام کاربری:</label><input type="text" id="username"
+                                        class="form-control">
+                                    <label for="password">رمزعبور:</label><input type="password" id="password"
+                                        class="form-control">
+                                    <label for="tellphone">تلفن همراه</label><input type="tel" id="tellphone"
+                                        class="form-control">
+                                    <label for="email">ایمیل:</label><input type="email" id="email"
+                                        class="form-control md-3">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button class="btn btn-sm btn-outline-success text-left m-1 p-1">وارد شوید</button>
+                                <button class="btn btn-link m-1 p-1 reg-btn" data-toggle="modal" data-target="#login"
+                                    onclick="removeReg()">ایا دارای حساب کاربری هستید؟</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /END modal of register -->
+                <!-- modal of log in -->
+                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title m-auto text-secondary">فرم ورود</h3>
+                                <button class="close m-1 p-1 text-danger" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="get" class="form-group">
+                                    <label for="username">نام کاربری:</label><input type="text" id="username"
+                                        class="form-control">
+                                    <label for="password">رمزعبور:</label><input type="password" id="password"
+                                        class="form-control">
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="modal-footer">
+
+                                    <button class="btn  btn-outline-success text-left m-1 p-1">وارد شوید</button>
+                                    <button class="btn  btn-sm  btn-link m-1 p-1 login-btn" data-toggle="modal"
+                                        data-target="#register" onclick="removeLogin()">آیا عضو سایت نیستید؟</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /END modal of log in -->
+            </div>
+        </div>
+        <!-- / END logo and login and register -->
+
+        <!-- navigation menue -->
+        <div class="container-fluid p-0 ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">صفحه اصلی
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                محصولات
+                            </a>
+                            <div class="dropdown-menu drop-category" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-center" href="product-makeup.html">آرایشی</a>
+                                <a class="dropdown-item text-center" href="product-skinCare.html">پوستی</a>
+                                <a class="dropdown-item text-center" href="product-hair.html">مراقبت از مو</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                برندها
+                            </a>
+                            <div class="dropdown-menu drop-brands" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-center" href="cinere.html">سینره</a>
+                                <a class="dropdown-item text-center" href="cerita.html">سریتا</a>
+                                <a class="dropdown-item text-center" href="goldenRose.html">گلدن رز</a>
+                                <a class="dropdown-item text-center" href="calista.html">کالیستا</a>
+                                <a class="dropdown-item text-center" href="hydroderm.html">هیدرودرم</a>
+                                <a class="dropdown-item text-center" href="biol.html">بیول</a>
+                                <a class="dropdown-item text-center" href="bioderma.html">بایودرما</a>
+                                <a class="dropdown-item text-center" href="sunsafe.html">سان سیف</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-to-us.html">تماس با ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html"> درباره ما</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="دنبال چی میگردی؟" aria-label="search"
+                                aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                            </div>
+
+                        </div>
+                    </form>
+                </nav>
+                <div class="navbar-nav">
+                    <a href="cart.html" class="nav-item-cart">
+                        <li class="nav-item border mx-2 rounded-circle cart">
+                            <i class="fas fa-shopping-basket p-2"></i><span>0</span>
+                        </li>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <!--/END navigation menue -->
+    </header>
+
+    <main>
+        <!-- all product of skincare  -->
+        <div class="container">
+            <div class="title">
+                <h2 class="text-center p-2 my-2">محصولات مراقبتی پوست</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="cinere-zhelShoyande.html" target="blank">
+                            <img src="./img/cinere-zelShoyande.jpg" alt="cinere-zelShoyande" class="img-fluid">
+                            <h6 class="mt-2">
+                                ژل شوینده آنتی پولوشن پوست چرب سینره</h6>
+                            <p>30.000 تومان</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="cinere-zedAftab.html" target="blank">
+                            <img src="./img/cinere-zedAftab.jpg" alt="cinere-zedAftab" class="img-fluid">
+                            <h6 class="mt-2"> کرم ضد آفتاب SPF30+ بدون رنگ مینرال سینره</h6>
+                            <p>50.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="cinere-toner.html" target="blank">
+                            <img src="./img/cinere-toner.jpg" alt="cinere-toner" class="img-fluid">
+                            <h6 class="mt-2">تونر پاک کننده صورت سینره</h6>
+                            <p>27.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="cinere-ShirPakKon-postKhosk.html" target="blank">
+                            <img src="./img/cinere-ShirPakKon-postKhosk.jpg" alt="cinere-ShirPakKon-postKhosk"
+                                class="img-fluid">
+                            <h6 class="mt-2">شیر پاک کن پوست معمولی و خشک سینره</h6>
+                            <p>32.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="cinere-kermDorCheshm.html" target="blank">
+                            <img src="./img/cinere-kermDorCheshm.jpg" alt="cinere-kermDorCheshm" class="img-fluid">
+                            <h6 class="mt-2">کرم دور چشم بالای 40 سال سینره</h6>
+                            <p>120.000 تومان</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-creamDorCheshm.html" target="blank">
+                            <img src="./img/hydroderm-creamDorCheshm.jpg" alt="hydroderm-creamDorCheshm"
+                                class="img-fluid">
+                            <h6 class="mt-2">کرم ضد چروک دور چشم هیدرودرم</h6>
+                            <p>76.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-lipbalm.html" target="blank">
+                            <img src="./img/hydroderm-lipbalm.jpg" alt="hydroderm-lipbalm" class="img-fluid">
+                            <h6 class="mt-2">
+                                بالم لب مرطوب کننده هیدرودرم</h6>
+                            <p>22.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-MaskSouratRos.html" target="blank">
+                            <img src="./img/hydroderm-MaskSouratRos.jpg" alt="hydroderm-MaskSouratRos"
+                                class="img-fluid">
+                            <h6 class="mt-2">ماسک صورت رسی لایه بردار هیدرودرم</h6>
+                            <p>73.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-shirPakKon.html" target="blank">
+                            <img src="./img/hydroderm-ShirPakKon.jpg" alt="hydroderm-ShirPakKon" class="img-fluid">
+                            <h6 class="mt-2">شیر پاک کن گیاهی هیدرودرم</h6>
+                            <p>40.000 تومان</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-zedAftabCreamPoudri.html" target="blank">
+                            <img src="./img/hydroderm-zedAftabCreamPoudri.jpg" alt="hydroderm-zedAftabCreamPoudri"
+                                class="img-fluid">
+                            <h6 class="mt-2">کرم ضدآفتاب کرم پودری 2در1 هیدرودرم</h6>
+                            <p>100.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="hydroderm-zhelShostShouCharb.html" target="blank">
+                            <img src="./img/hydroderm-zhelShostShouCharb.jpg" alt="hydroderm-zhelShostShouCharb"
+                                class="img-fluid">
+                            <h6 class="mt-2">ژل شستشو صورت پوست چرب و آکنه ای هیدرودرم</h6>
+                            <p>35.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="bioderma-miselarwater.html" target="blank">
+                            <img src="./img/bioderma-miselarwater.jpg" alt="bioderma-miselarwater" class="img-fluid">
+                            <h6 class="mt-2">محلول میسلار پاک کننده آرایش و آلودگی صورت بایودرما</h6>
+                            <p>120.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="bioderma-skrab.html" target="blank">
+                            <img src="./img/bioderma-skrab.jpg" alt="bioderma-skrab" class="img-fluid">
+                            <h6 class="mt-2">اسکراب صورت بایودرما</h6>
+                            <p>260.000 تومان</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="bioderma-zedAftab50spf.html">
+                            <img src="./img/bioderma-zedAftab50spf.jpg" alt="bioderma-zedAftab50spf" class="img-fluid">
+                            <h6 class="mt-2">کرم ضد آفتاب ضد لک اسپات Spf50 حجم ۳۰ میلی لیتر بایودرما</h6>
+                            <p>170.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="bioderma-ZelPHom.html" target="blank">
+                            <img src="./img/bioderma-ZhelPHom-.jpg" alt="bioderma-ZhelPHom-" class="img-fluid">
+                            <h6 class="mt-2">ژل فوم پاک کننده اینتنسیو اتودرم بایودرما</h6>
+                            <p>125.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item-product text-center">
+                        <div class="text-left icon">
+                            <i class="far fa-heart fa-lg m-2" onclick="fav(this)"></i>
+                            <i class="fas fa-shopping-basket fa-lg add-cart"></i>
+                        </div>
+                        <a href="biol-soapForMakeup.html" target="blank">
+                            <img src="./img/biol-soapForMakeup.jpg" alt="biol-soapForMakeup" class="img-fluid">
+                            <h6 class="mt-2">صابون آرايش پاكن شيركرمي جوانه گندم، ضد پيري پوست خشك بیول</h6>
+                            <p>11.000 تومان</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center link-to-page my-4">
+            <a href="product-skinCare-page2.html"><i class="fas fa-chevron-right pt-1"></i></a>
+            <a href="product-skinCare-page2.html">2</a>
+            <a href="product-skinCare.html" class="activ-a">1</a>
+        </div>
+        <!--/END all product of skincare  -->
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info m-2">
+                        <h5>اطلاعات تماس</h5>
+                        <p><i class="fas fa-home p-1"></i>خیابان پیروزی - بلوار نبرد جنوبی -خیابان ده حقی (آهنگ) - نبش
+                            بلوارکوثر
+                        </p>
+                        <p><i class="fas fa-phone p-1"></i>۰۲۱-۳۳۷۲۲۸۳۱</p>
+                        <p><i class="fas fa-clock p-1"></i>ساعت پاسخگویی:شنبه تا پنج شنبه 9:00 تا 18:00</p>
+                        <p><i class="fas fa-envelope p-1"></i>info@zibaShow.ir</p>
+                        <div class="social-media">
+                            <i class="fab fa-instagram p-1"></i>
+                            <i class="fab fa-telegram p-1"></i>
+                            <i class="fab fa-twitter p-1"></i>
+                            <i class="fab fa-pinterest p-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-info m-2">
+                        <h5>با زیباشو،زیباشوید!</h5>
+                        <p>فروشگاه اینترنتی زیباشو به عنوان مرجع تخصصی در حوزه بهداشتی و آرایشی فعالیت دارد و به شما
+                            همراهان عزیز کمک میکند تا پوستی سالم و زیبا داشته باشید؛ در زیباشو شما میتوانید محصولات
+                            آرایشی و بهداشتی متناسب با
+                            پوست خود را از انواع برند های معتبر ایرانی و خارجی تهیه و زیبایی خود را دوچندان کنید.</p>
+                        <div class="logo-img text-center">
+                            <img src="./img/logo-enamad.png" alt="logo-enamad">
+                            <img src="./img/logo-samandehi.png" alt="logo-samandehi">
+                            <img src="./img/logo-anjoman.png" alt="logo-anjoman">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col link-footer m-4">
+                            <a href="contact-to-us.html" class="p-2">تماس با ما</a>
+                            <a href="about-us.html" class="p-2">درباره ما</a>
+                            <a href="guid-of-buy.html" class="p-2">راهنمای سفارش و خرید</a>
+                            <a href="send-product.html" class="p-2">ارسال و تحویل کالا</a>
+                        </div>
+                        <div class="col link-footer m-4">
+                            <a href="privacy.html" class="p-2">حریم خصوصی</a>
+                            <a href="rule-of-zibaShow.html" class="p-2">قوانین و مقررات</a>
+                            <a href="send-gift.html" class="p-2">ارسال هدیه</a>
+                            <a href="common-question.html" class="p-2">سوالات متداول</a>
+                        </div>
+                    </div>
+                    <div class="code mx-4">
+                        <h5>ایمیل تو وارد کن تا از تخفیف ها جا نمونی!</h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-dark" type="button">ارسال</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4 copy-right">
+                    <p class="text-center">کلیه حقوق این سایت متعلق به شرکت <bdo dir="ltr">mahdesign</bdo> می باشد.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /END footer -->
+
+    <!-- jquery -->
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--main file js -->
+    <script src="js/main.js"></script>
+    <script src="js/product-skinCare.js"></script>
+</body>
+
+</html>
