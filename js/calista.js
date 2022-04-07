@@ -181,10 +181,12 @@ function deleteButtons() {
 
   for (let i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener("click", () => {
-      productName = deleteButtons[i].parentElement.parentElement
-        .querySelector(".col-md-2 img")
-        .src.substr(22)
-        .replace(".jpg", "");
+      const srcImg =
+        deleteButtons[i].parentElement.parentElement.querySelector(
+          ".col-md-2 img"
+        ).src;
+      const IndexOfImg = srcImg.indexOf("g/") + 2; //+2 shod chon index g peyda karde va bayad anadeze g / berim jolo ta be esm product beresim
+      productName = srcImg.substr(IndexOfImg).replace(".jpg", "");
 
       localStorage.setItem(
         "cartNumbers",
@@ -221,7 +223,7 @@ function manageQuantity() {
       currentQuantity = decreaseButton[i].previousSibling.value;
 
       const srcImg =
-        increaseButton[i].parentElement.parentElement.querySelector(
+        decreaseButton[i].parentElement.parentElement.querySelector(
           ".col-md-2 img"
         ).src;
       const IndexOfImg = srcImg.indexOf("g/") + 2; //+2 shod chon index g peyda karde va bayad anadeze g / berim jolo ta be esm product beresim
